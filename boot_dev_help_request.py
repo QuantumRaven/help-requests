@@ -8,7 +8,7 @@ def clear_terminal():
     else:
         os.system("clear")
 
-def help_request():
+def bootdev_help_request():
     lesson_link = input("\nLesson link: ")    
 
     print("\nNow, enter your text (type 'END' on a new line to finish):\n")
