@@ -36,6 +36,7 @@ def theodinproject_help_request():
     multiline_input = sys.stdin.read()
     clear_terminal()
     print(f"{lesson_link}\n\n{multiline_input}")
+    return multiline_input
 
 
 def main():
