@@ -24,6 +24,7 @@ def bootdev_help_request():
     multiline_input = sys.stdin.read()
     clear_terminal()
     print(f"{lesson_link}\n\n{multiline_input}")
+    return multiline_input
 
 
 def theodinproject_help_request():
@@ -50,11 +51,15 @@ def main():
 
         if choice == "1":
             clear_terminal()
-            bootdev_help_request()
+            multiline_input = bootdev_help_request()
+            with open("bootdev.md", "w") as file:
+                file.write(multiline_input)
             break
         elif choice == "2":
             clear_terminal()
-            theodinproject_help_request()
+            multiline_input = theodinproject_help_request()
+            with open("theodinproject.md", "w") as file:
+                file.write(multiline_input)
             break
         elif choice == "3":
             clear_terminal()
