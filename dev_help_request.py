@@ -20,7 +20,7 @@ def bootdev_help_request():
     based on their provided formatting in Discord."""
     lesson_link = input("\nLesson link: ")
 
-    print("\nNow, enter your text (type 'END' on a new line to finish):\n")
+    print("\nNow, enter your text (press Ctrl+D to finish):\n")
     multiline_input = sys.stdin.read()
     clear_terminal()
     print(f"{lesson_link}\n\n{multiline_input}")
@@ -30,7 +30,7 @@ def theodinproject_help_request():
     based on their provided formatting in Discord and website."""
     lesson_link = input("\nLesson link: ")
 
-    print("\nNow, enter your text (type 'END' on a new line to finish):\n")
+    print("\nNow, enter your text (press Ctrl+D to finish):\n")
     multiline_input = sys.stdin.read()
     clear_terminal()
     print(f"{lesson_link}\n\n{multiline_input}")
