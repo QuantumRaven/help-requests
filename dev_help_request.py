@@ -25,6 +25,7 @@ def bootdev_help_request():
     clear_terminal()
     print(f"{lesson_link}\n\n{multiline_input}")
 
+
 def theodinproject_help_request():
     """This generates a help request for https://theodinproject.com/ lessons
     based on their provided formatting in Discord and website."""
@@ -34,3 +35,27 @@ def theodinproject_help_request():
     multiline_input = sys.stdin.read()
     clear_terminal()
     print(f"{lesson_link}\n\n{multiline_input}")
+
+
+def main():
+    """Calls for the user to make a choice on what
+    function they want to call based on available options."""
+    print("Choose a function to execute: ")
+    print("1. Boot.Dev help request")
+    print("2. TheOdinProject help request")
+    print("3. Exit")
+
+    choice = input("Enter your choice of 1, 2, or 3: "
+
+    if choice == "1":
+        bootdev_help_request()
+    elif choice == "2":
+        theodinproject_help_request()
+    elif choice == "3":
+        print("Exiting program...")
+        break
+    else:
+        print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
