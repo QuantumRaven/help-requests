@@ -49,10 +49,15 @@ def main():
         choice = input("\nEnter your choice of 1, 2, or 3: ")
 
         if choice == "1":
+            clear_terminal()
             bootdev_help_request()
+            break
         elif choice == "2":
+            clear_terminal()
             theodinproject_help_request()
+            break
         elif choice == "3":
+            clear_terminal()
             print("Exiting program...")
             break
         else:
