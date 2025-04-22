@@ -45,7 +45,7 @@ def main():
     print("2. TheOdinProject help request")
     print("3. Exit")
 
-    choice = input("Enter your choice of 1, 2, or 3: "
+    choice = input("Enter your choice of 1, 2, or 3: ")
 
     if choice == "1":
         bootdev_help_request()
