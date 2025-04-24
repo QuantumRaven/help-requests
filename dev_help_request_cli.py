@@ -59,21 +59,18 @@ def main():
         for choice in options:
 
             if choice == "boot_dev":
-                print("You've chosen boot_dev...")
                 clear_terminal()
                 multi_line_input = boot_dev_help_request()
                 with open("boot_dev.md", "w") as file:
                     file.write(multi_line_input)
                 break
             elif choice == "the_odin_project":
-                print("You've chosen the_odin_project...")
                 clear_terminal()
                 multi_line_input = the_odin_project_help_request()
                 with open("the_odin_project.md", "w") as file:
                     file.write(multi_line_input)
                 break
             elif choice == "exit":
-                print("You've chosen... to terminate me? D= ")
                 clear_terminal()
                 print("exiting program...")
                 break
