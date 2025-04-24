@@ -40,6 +40,15 @@ The Odin Project
 def the_odin_project_help_request():
     """This generates a help request for https://theodinproject.com/ lessons
     based on their provided formatting in Discord and website."""
+    print("""
+    Answer the following questions:
+
+    What do you think the problem is?
+    What exactly do you want to happen?
+    What is actually happening?
+    How did you get there?
+    What have you tried so far?
+    """)
     lesson_link = input("\nLesson link: ")
 
     print("\nNow, enter your text (press Ctrl+D to finish):\n")
@@ -61,15 +70,13 @@ def main():
 
         if chosen_one == "boot_dev":
             clear_terminal()
-            selection_option()
-            print(f"You've selected {chosen_one}.")
+            selection_option(chosen_one)
             multi_line_input = boot_dev_help_request()
             with open("boot_dev.md", "w") as file:
                 file.write(multi_line_input)
         elif chosen_one == "the_odin_project":
             clear_terminal()
-            selection_option()
-            print(f"You've selected {chosen_one}.")
+            selection_option(chosen_one)
             multi_line_input = the_odin_project_help_request()
             with open("the_odin_project.md", "w") as file:
                 file.write(multi_line_input)
