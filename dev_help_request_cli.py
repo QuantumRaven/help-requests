@@ -46,9 +46,9 @@ def main():
         print("Choose a function to execute: ")
         print("boot_dev")
         print("the_odin_project")
-        print("Exit")
+        print("exit")
 
-        choice = input("\nEnter your choice of boot_dev, the_odin_project, or Exit: ")
+        choice = input("\nEnter your choice of boot_dev, the_odin_project, or exit: ")
 
         if choice == "boot_dev":
             clear_terminal()
@@ -62,9 +62,9 @@ def main():
             with open("the_odin_project.md", "w") as file:
                 file.write(multi_line_input)
             break
-        elif choice == "Exit":
+        elif choice == "exit":
             clear_terminal()
-            print("Exiting program...")
+            print("exiting program...")
             break
         else:
             print("Invalid choice. Please try again.")
