@@ -18,6 +18,9 @@ def clear_terminal():
 def selection_option(chosen_one):
     print(f"You've selected {chosen_one}.")
 
+"""
+Boot.Dev
+"""
 
 def boot_dev_help_request():
     """This generates a help request for https://boot.dev/ lessons
@@ -30,6 +33,9 @@ def boot_dev_help_request():
     print(f"{lesson_link}\n\n{multi_line_input}")
     return multi_line_input
 
+"""
+The Odin Project
+"""
 
 def the_odin_project_help_request():
     """This generates a help request for https://theodinproject.com/ lessons
