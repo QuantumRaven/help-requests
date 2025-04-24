@@ -41,41 +41,37 @@ def the_odin_project_help_request():
 
 
 def main():
-    """Calls for the user to make a choice on what
+    """Calls for the user to make a chosen_one on what
     function they want to call based on available options."""
 
     while True:
         options = ["boot_dev", "the_odin_project", "exit"]
         terminal_menu = TerminalMenu(options)
         menu_entry_index = terminal_menu.show()
-        chosen_one = menu_entry_index
-        print(f"You've selected {options[menu_entry_index]}.")
+        chosen_one = options[menu_entry_index]
+        print(f"You've selected {chosen_one}.")
 
         # print("Choose a function to execute: ")
         # print("boot_dev")
         # print("the_odin_project")
         # print("exit")
 
-        for choice in options:
-
-            if choice == "boot_dev":
-                clear_terminal()
-                multi_line_input = boot_dev_help_request()
-                with open("boot_dev.md", "w") as file:
-                    file.write(multi_line_input)
-                break
-            elif choice == "the_odin_project":
-                clear_terminal()
-                multi_line_input = the_odin_project_help_request()
-                with open("the_odin_project.md", "w") as file:
-                    file.write(multi_line_input)
-                break
-            elif choice == "exit":
-                clear_terminal()
-                print("exiting program...")
-                break
-            else:
-                print("Invalid choice. Please try again.")
+        if chosen_one == "boot_dev":
+            clear_terminal()
+            multi_line_input = boot_dev_help_request()
+            with open("boot_dev.md", "w") as file:
+                file.write(multi_line_input)
+        elif chosen_one == "the_odin_project":
+            clear_terminal()
+            multi_line_input = the_odin_project_help_request()
+            with open("the_odin_project.md", "w") as file:
+                file.write(multi_line_input)
+        elif chosen_one == "exit":
+            clear_terminal()
+            print("exiting program...")
+            sys.exit()
+        else:
+            print("Invalid chosen_one. Please try again.")
 
 
 if __name__ == "__main__":
