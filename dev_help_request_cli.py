@@ -21,7 +21,7 @@ def boot_dev_help_request():
     lesson_link = input("\nLesson link: ")
 
     print("\nNow, enter your text (press Ctrl+D to finish):\n")
-    multiline_input = sys.stdin.read()
+    multi_line_input = sys.stdin.read()
     clear_terminal()
     print(f"{lesson_link}\n\n{multi_line_input}")
     return multi_line_input
@@ -33,7 +33,7 @@ def the_odin_project_help_request():
     lesson_link = input("\nLesson link: ")
 
     print("\nNow, enter your text (press Ctrl+D to finish):\n")
-    multiline_input = sys.stdin.read()
+    multi_line_input = sys.stdin.read()
     clear_terminal()
     print(f"{lesson_link}\n\n{multi_line_input}")
     return multi_line_input
