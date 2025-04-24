@@ -15,6 +15,9 @@ def clear_terminal():
     else:
         os.system("clear")
 
+def selection_option(chosen_one):
+    print(f"You've selected {chosen_one}.")
+
 
 def boot_dev_help_request():
     """This generates a help request for https://boot.dev/ lessons
@@ -49,25 +52,25 @@ def main():
         terminal_menu = TerminalMenu(options)
         menu_entry_index = terminal_menu.show()
         chosen_one = options[menu_entry_index]
-        print(f"You've selected {chosen_one}.")
-
-        # print("Choose a function to execute: ")
-        # print("boot_dev")
-        # print("the_odin_project")
-        # print("exit")
 
         if chosen_one == "boot_dev":
             clear_terminal()
+            selection_option()
+            print(f"You've selected {chosen_one}.")
             multi_line_input = boot_dev_help_request()
             with open("boot_dev.md", "w") as file:
                 file.write(multi_line_input)
         elif chosen_one == "the_odin_project":
             clear_terminal()
+            selection_option()
+            print(f"You've selected {chosen_one}.")
             multi_line_input = the_odin_project_help_request()
             with open("the_odin_project.md", "w") as file:
                 file.write(multi_line_input)
         elif chosen_one == "exit":
             clear_terminal()
+            selection_option()
+            print(f"You've selected {chosen_one}.")
             print("exiting program...")
             sys.exit()
         else:
