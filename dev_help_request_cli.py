@@ -15,7 +15,7 @@ def clear_terminal():
         os.system("clear")
 
 
-def bootdev_help_request():
+def boot_dev_help_request():
     """This generates a help request for https://boot.dev/ lessons
     based on their provided formatting in Discord."""
     lesson_link = input("\nLesson link: ")
@@ -23,11 +23,11 @@ def bootdev_help_request():
     print("\nNow, enter your text (press Ctrl+D to finish):\n")
     multiline_input = sys.stdin.read()
     clear_terminal()
-    print(f"{lesson_link}\n\n{multiline_input}")
-    return multiline_input
+    print(f"{lesson_link}\n\n{multi_line_input}")
+    return multi_line_input
 
 
-def theodinproject_help_request():
+def the_odin_project_help_request():
     """This generates a help request for https://theodinproject.com/ lessons
     based on their provided formatting in Discord and website."""
     lesson_link = input("\nLesson link: ")
@@ -35,8 +35,8 @@ def theodinproject_help_request():
     print("\nNow, enter your text (press Ctrl+D to finish):\n")
     multiline_input = sys.stdin.read()
     clear_terminal()
-    print(f"{lesson_link}\n\n{multiline_input}")
-    return multiline_input
+    print(f"{lesson_link}\n\n{multi_line_input}")
+    return multi_line_input
 
 
 def main():
@@ -44,25 +44,25 @@ def main():
     function they want to call based on available options."""
     while True:
         print("Choose a function to execute: ")
-        print("1. Boot.Dev help request")
-        print("2. TheOdinProject help request")
-        print("3. Exit")
+        print("boot_dev")
+        print("the_odin_project")
+        print("Exit")
 
-        choice = input("\nEnter your choice of 1, 2, or 3: ")
+        choice = input("\nEnter your choice of boot_dev, the_odin_project, or Exit: ")
 
-        if choice == "1":
+        if choice == "boot_dev":
             clear_terminal()
-            multiline_input = bootdev_help_request()
-            with open("bootdev.md", "w") as file:
-                file.write(multiline_input)
+            multi_line_input = boot_dev_help_request()
+            with open("boot_dev.md", "w") as file:
+                file.write(multi_line_input)
             break
-        elif choice == "2":
+        elif choice == "the_odin_project":
             clear_terminal()
-            multiline_input = theodinproject_help_request()
-            with open("theodinproject.md", "w") as file:
-                file.write(multiline_input)
+            multi_line_input = the_odin_project_help_request()
+            with open("the_odin_project.md", "w") as file:
+                file.write(multi_line_input)
             break
-        elif choice == "3":
+        elif choice == "Exit":
             clear_terminal()
             print("Exiting program...")
             break
