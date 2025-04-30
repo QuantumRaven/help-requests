@@ -7,7 +7,7 @@ from simple_term_menu import TerminalMenu
 
 def clear_terminal():
     """Checks what operating system is in use: Windows or Linux.
-    Then, it clears the terminal with the approriate command based
+    Then, it clears the terminal with the appropriate command based
     on the operating system detected.
     """
     if os.name == "nt":
