@@ -8,7 +8,7 @@ from simple_term_menu import TerminalMenu
 def clear_terminal():
     """Checks what operating system is in use: Windows or Linux.
     Then, it clears the terminal with the approriate command based
-    on the operation system detected.
+    on the operating system detected.
     """
     if os.name == "nt":
         os.system("cls")
@@ -82,7 +82,7 @@ def main():
                 file.write(multi_line_input)
         elif chosen_one == "exit":
             clear_terminal()
-            selection_option()
+            selection_option(chosen_one)
             print(f"You've selected {chosen_one}.")
             print("exiting program...")
             sys.exit()
