@@ -14,12 +14,15 @@ def clear_terminal():
     else:
         os.system("clear")
 
+
 def selection_option(chosen_one):
     print(f"You've selected {chosen_one}.")
+
 
 """
 Boot.Dev
 """
+
 
 def boot_dev_help_request():
     """This generates a help request for https://boot.dev/ lessons
@@ -32,14 +35,17 @@ def boot_dev_help_request():
     print(f"{lesson_link}\n\n{multi_line_input}")
     return multi_line_input
 
+
 """
 The Odin Project
 """
 
+
 def the_odin_project_help_request():
     """This generates a help request for https://theodinproject.com/ lessons
     based on their provided formatting in Discord and website."""
-    print("""
+    print(
+        """
     Answer the following questions:
 
     What do you think the problem is?
@@ -47,7 +53,8 @@ def the_odin_project_help_request():
     What is actually happening?
     How did you get there?
     What have you tried so far?
-    """)
+    """
+    )
     lesson_link = input("\nLesson link: ")
 
     print("\nNow, enter your text (press Ctrl+D to finish):\n")
