@@ -2,7 +2,6 @@
 
 import sys
 import os
-from simple_term_menu import TerminalMenu
 
 
 def clear_terminal():
@@ -63,27 +62,24 @@ def main():
     function they want to call based on available options."""
 
     while True:
-        options = ["boot_dev", "the_odin_project", "exit"]
-        terminal_menu = TerminalMenu(options)
-        menu_entry_index = terminal_menu.show()
-        chosen_one = options[menu_entry_index]
+        option = input("\nEnter your choice of boot_dev, the_odin_project, or exit: ")
 
-        if chosen_one == "boot_dev":
+        if option == "boot_dev":
             clear_terminal()
-            selection_option(chosen_one)
+            selection_option(option)
             multi_line_input = boot_dev_help_request()
             with open("boot_dev.md", "w") as file:
                 file.write(multi_line_input)
-        elif chosen_one == "the_odin_project":
+        elif option == "the_odin_project":
             clear_terminal()
-            selection_option(chosen_one)
+            selection_option(option)
             multi_line_input = the_odin_project_help_request()
             with open("the_odin_project.md", "w") as file:
                 file.write(multi_line_input)
-        elif chosen_one == "exit":
+        elif option == "exit":
             clear_terminal()
-            selection_option(chosen_one)
-            print(f"You've selected {chosen_one}.")
+            selection_option(option)
+            print(f"You've selected {option}.")
             print("exiting program...")
             sys.exit()
         else:
